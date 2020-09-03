@@ -19,9 +19,10 @@ def get_row_col(cell_str, col_offset=0):
 
 
 if __name__ == "__main__":
-    # path = sys.path[-1]
     # 获取所有的文件
     path = sys.argv[0]
+    # 如果是命令行下执行，使用下面的路径。其他情况下正常注释
+    # path = sys.path[-1]
     print(path)
     if os.path.isfile(path):
         path = os.path.dirname(path)
@@ -84,7 +85,9 @@ if __name__ == "__main__":
                 get_row_col("G38", col_offset)[0], get_row_col("G38", col_offset)[1]
             ),
         }
-    data_pd = pd.read_json(json.dumps(data_dict), orient="index")
+    # dtype=False,不推断所属类型,保证精度不丢失;
+    # 详见:https://blog.csdn.net/yhyr_ycy/article/details/82726286
+    data_pd = pd.read_json(json.dumps(data_dict), dtype=False, orient="index")
     # 排序
     data_pd = data_pd[
         [
