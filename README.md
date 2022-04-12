@@ -14,7 +14,7 @@ pip install -r requirements.txt
 运行
 
 ```
-python 附加专项扣除数_20200424_1013.py
+python 附加专项扣除数_20220411_2110.py
 ```
 
 数据提取到**text.xlsx**中，然后把数据放到模板中，模板公式按实际情况更改。
