@@ -91,10 +91,10 @@ if __name__ == "__main__":
                 get_row_col("G38", zn_col_offset)[0], get_row_col("G38", zn_col_offset)[1]
             ),
             "婴幼儿一": table.cell_value(
-                get_row_col("G48", zn_col_offset+bsyr_col_offset)[0], get_row_col("G38", zn_col_offset+bsyr_col_offset)[1]
+                get_row_col("E49", zn_col_offset+bsyr_col_offset)[0], get_row_col("E49", zn_col_offset+bsyr_col_offset)[1]
             ),
             "婴幼儿二": table.cell_value(
-                get_row_col("G48", zn_col_offset+bsyr_col_offset+2)[0], get_row_col("G38", zn_col_offset+bsyr_col_offset+2)[1]
+                get_row_col("E49", zn_col_offset+bsyr_col_offset+2)[0], get_row_col("E49", zn_col_offset+bsyr_col_offset+2)[1]
             ),
         }
     print(data_dict)
