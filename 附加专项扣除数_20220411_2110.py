@@ -20,9 +20,9 @@ def get_row_col(cell_str, zn_col_offset=0):
 
 if __name__ == "__main__":
     # 运行py文件时指定
-    # path = sys.path[0]
+    path = sys.path[0]
     # 编译为excel时指定
-    path = sys.argv[0]
+    # path = sys.argv[0]
     print(path)
     if os.path.isfile(path):
         path = os.path.dirname(path)
