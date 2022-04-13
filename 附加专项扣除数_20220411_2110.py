@@ -98,7 +98,7 @@ if __name__ == "__main__":
             ),
         }
     print(data_dict)
-    # 取消类型推断
+    # 取消类型推断 dtype=False
     data_pd = pd.read_json(json.dumps(data_dict), orient="index",dtype=False)
     # 排序
     data_pd = data_pd[
