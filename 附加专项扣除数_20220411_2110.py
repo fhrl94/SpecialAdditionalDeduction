@@ -98,7 +98,8 @@ if __name__ == "__main__":
             ),
         }
     print(data_dict)
-    data_pd = pd.read_json(json.dumps(data_dict), orient="index")
+    # 取消类型推断
+    data_pd = pd.read_json(json.dumps(data_dict), orient="index",dtype=False)
     # 排序
     data_pd = data_pd[
         [
@@ -115,5 +116,5 @@ if __name__ == "__main__":
             "婴幼儿二",
         ]
     ]
-    data_pd["身份证号码"] = data_pd["身份证号码"].astype("str")
+    # data_pd["身份证号码"] = data_pd["身份证号码"].astype("str") # 身份证号码保存为文本
     data_pd.to_excel("{filename}.xlsx".format(filename="text"), index=False)
